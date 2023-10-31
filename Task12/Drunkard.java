@@ -28,7 +28,7 @@ public class Drunkard {
         while (b1.length != 0 && b2.length != 0 && count < 106) {
             int card1 = b1[0];
             int card2 = b2[0];
-            if (card1 > card2 || (card1 == 0 && card2 == 9)) {
+            if ((card1 > card2 || (card1 == 0 && card2 == 9)) && (card1!=9&&card2!=0)) {
                 int[] newb1 = new int[b1.length + 1];
                 System.arraycopy(b1, 1, newb1, 0, b1.length - 1);
                 newb1[newb1.length - 2] = card1;
@@ -38,6 +38,11 @@ public class Drunkard {
                 System.arraycopy(b2, 1, newb2, 0, b2.length - 1);
                 b2 = newb2;
                 count += 1;
+                for(int i =0; i<b2.length;i++)
+                {
+                    System.out.println(b2[i]);
+                }
+                System.out.println("==========================");
             } else {
                 int[] newb2 = new int[b2.length + 1];
                 System.arraycopy(b2, 1, newb2, 0, b2.length - 1);
