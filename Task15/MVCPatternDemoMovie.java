@@ -1,9 +1,5 @@
 package Task15;
 
-import Test.Attractions;
-import Test.AttractionsController;
-import Test.AttractionsView;
-
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
